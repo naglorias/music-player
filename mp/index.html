@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="shortcut icon"
+      href="./imgs/music-note-favicon.png"
+      type="image/png"
+    />
+    <script src="script.js" defer></script>
+    <title>Music Player App</title>
+  </head>
+  <body>
+    <h1>Music Player App</h1>
+    <div class="container">
+      <div class="wrapper">
+        <!-- Track details -->
+        <div class="player">
+          <!--  Track Image -->
+          <div class="image">
+            <img src="" alt="" />
+          </div>
+          <!-- Track Details -->
+          <div class="details">
+            <h3 class="artist"></h3>
+            <h3 class="song"></h3>
+            <h3 class="album"></h3>
+          </div>
+          <!-- Track -->
+          <div class="track">
+            <div class="current-time">00:00</div>
+            <input type="range" min="0" max="100" value="0" id="track-slider" />
+            <div class="duration-time">00:00</div>
+          </div>
+          <!-- Track controls -->
+          <div class="controls">
+            <div class="begin">
+              <i class="fa-solid fa-backward-fast" title="backward fast"></i>
+            </div>
+            <div class="rewind">
+              <i class="fa-solid fa-backward" title="previous"></i>
+            </div>
+            <div class="play-pause">
+              <i class="fa-solid fa-play" title="play"></i>
+            </div>
+            <div class="forward">
+              <i class="fa-solid fa-forward" title="next"></i>
+            </div>
+            <div class="end">
+              <i class="fa-solid fa-forward-fast" title="forward fast"></i>
+            </div>
+          </div>
+          <!-- Playlist controls -->
+          <div class="playlist-controls">
+            <div class="buttons">
+              <div class="repeat">
+                <i
+                  class="fa-solid fa-rotate-right tracks"
+                  title="repeat"
+                  id="repeat"
+                ></i>
+              </div>
+              <div class="shuffle">
+                <i
+                  class="fa-solid fa-shuffle tracks"
+                  title="shuffle"
+                  id="shuffle"
+                ></i>
+              </div>
+            </div>
+            <div class="volume">
+              <div class="mute">
+                <i class="fa-solid fa-volume-off" title="mute"></i>
+              </div>
+              <input
+                type="range"
+                name="volume"
+                id="volume-slider"
+                min="0"
+                max="100"
+                value="100"
+              />
+              <div class="high">
+                <i class="fa-solid fa-volume-high" title="high-volume"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="playlist">
+          <div id="list">
+            <ul>
+              <!-- List of tracks -->
+            </ul>
+          </div>
+          <div id="expand">
+            <i class="fa-solid fa-circle-chevron-right" id="open"></i>
+            <i class="fa-solid fa-circle-xmark" id="close"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
